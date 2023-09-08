@@ -27,7 +27,7 @@ jobs:
       - name: Run tests
         uses: actions-rs/cargo@v1
         env:
-          RUST_BACKTRACE: 1
+          RUST_BACKTRACE: full
         with:
           command: test
           args: --all --all-features --all-targets
