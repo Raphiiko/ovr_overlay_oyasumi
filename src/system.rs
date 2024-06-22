@@ -171,6 +171,13 @@ impl<'c> SystemManager<'c> {
         unsafe { self.inner.as_mut().GetTrackedDeviceClass(index.0) }
     }
 
+	pub fn get_tracked_device_activity_level<'ret, 'manager: 'ret>(
+		&'manager mut self,
+		index: TrackedDeviceIndex,
+	) -> sys::EDeviceActivityLevel {
+		unsafe { self.inner.as_mut().GetTrackedDeviceActivityLevel(index.0) }
+	}
+
     pub fn get_device_to_absolute_tracking_pose<'ret, 'manager: 'ret>(
         &'manager mut self,
         origin: ETrackingUniverseOrigin,
