@@ -3,72 +3,75 @@
 use autocxx::prelude::*; // use all the main autocxx functions
 
 include_cpp! {
-    #include "openvr.h"
+	#include "openvr.h"
 
-    // TrackedDeviceIndex_t constants
-    generate_pod!("vr::TrackedDeviceIndex_t")
-    generate!("vr::k_unTrackedDeviceIndex_Hmd")
-    generate!("vr::k_unMaxTrackedDeviceCount")
-    generate!("vr::k_unTrackedDeviceIndexOther")
-    generate!("vr::k_unTrackedDeviceIndexInvalid")
+	// TrackedDeviceIndex_t constants
+	generate_pod!("vr::TrackedDeviceIndex_t")
+	generate!("vr::k_unTrackedDeviceIndex_Hmd")
+	generate!("vr::k_unMaxTrackedDeviceCount")
+	generate!("vr::k_unTrackedDeviceIndexOther")
+	generate!("vr::k_unTrackedDeviceIndexInvalid")
 
-    generate!("vr::VR_Init")
-    generate_pod!("vr::EVRApplicationType")
-    generate!("vr::VR_Shutdown")
+	generate!("vr::VR_Init")
+	generate_pod!("vr::EVRApplicationType")
+	generate!("vr::VR_Shutdown")
 
-    generate!("vr::IVRSystem")
-    generate!("vr::VRSystem")
-    generate!("vr::k_unMaxPropertyStringSize")
+	generate!("vr::IVRSystem")
+	generate!("vr::VRSystem")
+	generate!("vr::k_unMaxPropertyStringSize")
 
-    // VREvents
-    generate!("vr::VREvent_t")
-    generate!("vr::VREvent_Data_t")
-    generate_pod!("vr::VREvent_Property_t")
+	// VREvents
+	generate!("vr::VREvent_t")
+	generate!("vr::VREvent_Data_t")
+	generate_pod!("vr::VREvent_Property_t")
 
-    // VR Settings
-    generate!("vr::IVRSettings")
-    generate!("vr::VRSettings")
-    generate!("vr::k_pch_SteamVR_Section")
-    generate!("vr::k_pch_CollisionBounds_Section")
+	// VR Settings
+	generate!("vr::IVRSettings")
+	generate!("vr::VRSettings")
+	generate!("vr::k_pch_SteamVR_Section")
+	generate!("vr::k_pch_SteamVR_HmdDisplayColorGainR_Float")
+	generate!("vr::k_pch_SteamVR_HmdDisplayColorGainG_Float")
+	generate!("vr::k_pch_SteamVR_HmdDisplayColorGainB_Float")
+	generate!("vr::k_pch_CollisionBounds_Section")
 
-    generate!("vr::IVROverlay")
-    generate!("vr::VROverlay")
-    generate_pod!("vr::EVROverlayError")
-    generate_pod!("vr::VROverlayHandle_t")
+	generate!("vr::IVROverlay")
+	generate!("vr::VROverlay")
+	generate_pod!("vr::EVROverlayError")
+	generate_pod!("vr::VROverlayHandle_t")
 
-    generate!("vr::IVRChaperoneSetup")
-    generate!("vr::VRChaperoneSetup")
+	generate!("vr::IVRChaperoneSetup")
+	generate!("vr::VRChaperoneSetup")
 
-    generate!("vr::VR_GetVRInitErrorAsSymbol")
-    generate_pod!("vr::EVRInitError")
+	generate!("vr::VR_GetVRInitErrorAsSymbol")
+	generate_pod!("vr::EVRInitError")
 
-    generate_pod!("vr::ETrackingUniverseOrigin")
-    generate!("vr::HmdMatrix34_t")
-    generate_pod!("vr::HmdVector3_t")
-    generate_pod!("vr::HmdQuaternion_t")
+	generate_pod!("vr::ETrackingUniverseOrigin")
+	generate!("vr::HmdMatrix34_t")
+	generate_pod!("vr::HmdVector3_t")
+	generate_pod!("vr::HmdQuaternion_t")
 
-    generate_pod!("vr::VRTextureBounds_t")
+	generate_pod!("vr::VRTextureBounds_t")
 
-    // input
-    generate!("vr::IVRInput")
-    generate!("vr::VRInput")
-    generate_pod!("vr::EVRInputError")
-    generate_pod!("vr::VRActionSetHandle_t")
-    generate_pod!("vr::VRActionHandle_t")
-    generate_pod!("vr::VRInputValueHandle_t")
-    generate_pod!("vr::VRActiveActionSet_t")
-    generate_pod!("vr::InputDigitalActionData_t")
-    generate_pod!("vr::InputAnalogActionData_t")
-    generate_pod!("vr::TrackedDevicePose_t")
-    generate_pod!("vr::InputPoseActionData_t")
-    generate_pod!("vr::InputOriginInfo_t")
-    generate_pod!("vr::InputBindingInfo_t")
-    generate!("vr::k_ulInvalidInputValueHandle")
+	// input
+	generate!("vr::IVRInput")
+	generate!("vr::VRInput")
+	generate_pod!("vr::EVRInputError")
+	generate_pod!("vr::VRActionSetHandle_t")
+	generate_pod!("vr::VRActionHandle_t")
+	generate_pod!("vr::VRInputValueHandle_t")
+	generate_pod!("vr::VRActiveActionSet_t")
+	generate_pod!("vr::InputDigitalActionData_t")
+	generate_pod!("vr::InputAnalogActionData_t")
+	generate_pod!("vr::TrackedDevicePose_t")
+	generate_pod!("vr::InputPoseActionData_t")
+	generate_pod!("vr::InputOriginInfo_t")
+	generate_pod!("vr::InputBindingInfo_t")
+	generate!("vr::k_ulInvalidInputValueHandle")
 
-    // applications
-    generate!("vr::IVRApplications")
-    generate!("vr::VRApplications")
-    generate_pod!("vr::EVRApplicationError")
+	// applications
+	generate!("vr::IVRApplications")
+	generate!("vr::VRApplications")
+	generate_pod!("vr::EVRApplicationError")
 }
 
 //pub use ffi::vr::*;
