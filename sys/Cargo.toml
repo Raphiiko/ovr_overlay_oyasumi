@@ -25,9 +25,9 @@ exclude = [
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-autocxx = "=0.26.0"
-cxx = "=1.0.120"
+autocxx = "0.29"
+cxx = "1.0"
 
 [build-dependencies]
-autocxx-build = "=0.26.0"
+autocxx-build = "0.29"
 normpath = "0.3"
