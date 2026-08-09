@@ -230,6 +230,7 @@ impl VREvent {
                 std::mem::size_of::<sys::VREvent_t>(),
             )
             .as_array()
+            .expect("VREvent_t is expected to be 64 bytes")
         };
         let data = &bytes[12..64];
         let mut data_slice: [u8; 52] = [0; 52];
