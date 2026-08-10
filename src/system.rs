@@ -1,5 +1,4 @@
 use byteorder::ByteOrder;
-use slice_of_array::SliceArrayExt;
 use sys::ETrackingUniverseOrigin;
 
 use crate::errors::ETrackedPropertyError;

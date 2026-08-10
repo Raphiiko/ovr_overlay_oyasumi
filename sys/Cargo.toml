@@ -8,7 +8,7 @@ license = "MIT OR Apache-2.0"
 repository = "https://github.com/TheButlah/ovr_overlay"
 
 edition = "2021"
-rust-version = "1.58"
+rust-version = "1.93.0"
 
 exclude = [
     "/openvr",
@@ -25,9 +25,9 @@ exclude = [
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-autocxx = "0.29"
-cxx = "1.0"
+autocxx = "0.30"
+cxx = "1.0.199"
 
 [build-dependencies]
-autocxx-build = "0.29"
-normpath = "0.3"
+autocxx-build = "0.30"
+normpath = "1.5.1"
