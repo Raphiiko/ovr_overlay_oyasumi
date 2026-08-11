@@ -77,3 +77,5 @@ include_cpp! {
 //pub use ffi::vr::*;
 pub use ffi::vr::*;
 pub use ffi::{make_string, ToCppString};
+
+include!(concat!(env!("OUT_DIR"), "/checked_enums.rs"));
